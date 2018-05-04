@@ -1,0 +1,7 @@
+tmp/
+dest/
+build/
+dist/
+venv/
+*.egg-info/
+*.swp

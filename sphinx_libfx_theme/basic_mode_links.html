@@ -1,0 +1,53 @@
+{% extends "!page.html" %}
+{% block content %}
+<div class="section">
+        <h1>Links</h1>
+        <ul class="fx-basic-links">
+                {% if next %}
+                <li>
+                        <a href="{{ next.link|e }}">
+                                <span>Next</span>
+                                <i class="fas fa-chevron-right"></i> 
+                        </a>
+                </li>
+                {% endif %}
+
+                {% if prev %}
+                <li>
+                        <a href="{{ prev.link|e }}">
+                                <span>Previous</span>
+                        </a>
+                </li>
+                {% endif %}
+
+                {% block doc_source %}
+                {% if has_source %}
+                <li>
+                        <a href="/_sources/{{sourcename}}">
+                                <span>Source</span>
+                        </a>
+                </li>
+                {% endif %}
+                {% endblock %}
+
+                <li>
+                        <a href="{{pathto('downloads')}}">
+                                <span>Downloads</span>
+                        </a>
+                </li>
+
+                <li>
+                        <a href="{{pathto('help')}}">
+                                <span>Help</span>
+                        </a>
+                </li>
+
+                <li>
+                        <a href="{{pathto('about')}}">
+                                <span>About</span>
+                        </a>
+                </li>
+        </ul>
+</div>
+</div>
+{% endblock %}

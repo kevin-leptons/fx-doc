@@ -1,0 +1,9 @@
+{% extends "!page.html" %}
+{% block content %}
+<div class="section">
+        <div class="fx-basic-toc">
+                <h1>Table of Contents</h1>
+                {{toctree(collapse=False, includehidden=True)}}
+        </div>
+</div>
+{% endblock %}

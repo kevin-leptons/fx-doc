@@ -1,0 +1,61 @@
+{% extends "!page.html" %}
+{% block doc_source %}
+{% endblock %}
+{% block content %}
+<div class="section">
+<h1>Downloads</h1>
+
+<div class="section">
+        <h2>Files</h2>
+        <ul>
+                <li>
+                        <b>PDF</b>
+                        <a href="{{pdf_file}}">
+                                <span class="name"> {{pdf_file_name}}</span>
+                        </a>
+                </li>
+                <li>
+                        <b>TEXT</b>
+                        <a href="{{text_file}}">
+                                <span class="name"> {{text_file_name}}</span>
+                        </a>
+                </li>
+        </ul>
+</div>
+
+<div class="section">
+        <h2>PDF using</h2>
+        <p>
+                <a href="https://en.wikipedia.org/wiki/Portable_Document_Format">PDF</a>
+                files are uses for offline reading and A4 papers printing.
+                It can be open by PDF readers such as
+                <a href="https://en.wikipedia.org/wiki/Evince">Evince</a>,
+                <a href="https://en.wikipedia.org/wiki/Adobe_Acrobat">Adobe Acrobat</a>
+                or
+                <a href="https://en.wikipedia.org/wiki/Foxit_Reader">Foxit Reader</a>
+</div>
+<div class="section">
+        <h2>TEXT using</h2>
+        <p>
+                <a href="https://en.wikipedia.org/wiki/Text_file">TEXT</a>
+                files are use for offline reading and usefull for
+                <a href="https://en.wikipedia.org/wiki/Computer_terminal">Terminal</a>
+                environments. However, it does not contains
+                graphics resources such as images. It contains text files are
+                compressed and can be decompress by tools such as
+                <a href="https://www.gnu.org/software/tar/">tar</a>,
+                <a href="https://en.wikipedia.org/wiki/7-Zip">7zip</a>
+                or
+                <a href="https://en.wikipedia.org/wiki/WinRAR">WinRAR</a>.
+                After decompressing, start reading with <b>index.txt</b>
+                file inside output directory. There are many TEXT readers
+                such as
+                <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">VIM</a>,
+                <a href="https://en.wikipedia.org/wiki/Gedit">gedit</a>,
+                or
+                <a href="https://en.wikipedia.org/wiki/Notepad%2B%2B">Notepad++</>
+        </p>
+</div>
+
+</div>
+{% endblock %}

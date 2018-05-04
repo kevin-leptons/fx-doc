@@ -1,0 +1,61 @@
+{% extends "!page.html" %}
+{% block doc_source %}
+{% endblock %}
+{% block content %}
+<div class="section">
+        <div class="section">
+                <h1>Information</h1>
+                <table>
+                        <colgroup>
+                                <col width="22%">
+                                <col width="78%">
+                        </colgroup>
+                        <thead>
+                                <tr>
+                                        <th class="head">Key</th>
+                                        <th class="head">Value</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <td>Name</td>
+                                        <td>{{project}}</td>
+                                </tr>
+                                <tr>
+                                        <td>License</td>
+                                        <td>{{license}}</td>
+                                </tr>
+                                <tr>
+                                        <td>Version</td>
+                                        <td>{{version}}</td>
+                                </tr>
+                                <tr>
+                                        <td>Last updated</td>
+                                        <td>{{last_updated}}</td>
+                                </tr>
+                                <tr>
+                                        <td>Author</td>
+                                        <td>{{author}}</td>
+                                </tr>
+                                <tr>
+                                        <td>Documentation Engine</td>
+                                        <td>
+                                                <a href="http://sphinx-doc.org/"> Sphinx v{{sphinx_version}}</a>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>PDF Engine</td>
+                                        <td>
+                                                <a href="https://www.tug.org/texlive/">TexLive</a>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>HTML Interface</td>
+                                        <td>libfx</td>
+                                </tr>
+                        </tbody>
+                </table>
+                <img src="{{pathto('/favicon.png', 1)}}" title="Logo">
+        </div>
+</div>
+{% endblock %}

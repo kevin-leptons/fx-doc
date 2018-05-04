@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="favicon.png" type="image/png">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="stylesheet" href="{{pathto('_static/css/main.css', 1)}}">
+        <link href="{{pathto('_static/fontello/css/fontello.css', 1)}}" rel="stylesheet">
+        <script src="{{pathto('_static/js/main.js', 1)}}" type="application/javascript"></script>
+        <title>{{title}}</title>
+
+        {% block extend_js %}
+        {% endblock %}
+</head>
+<body>
+{% block body %}
+        <div class="fx-container">
+                <div id="fx-toc" class="fx-toc fx-link-hide">
+                        {{toctree()}}
+                </div>
+                <div class="fx-body" id="fx-body" tabindex="0">
+                        <div class="fx-content">
+                                {% block content %}
+                                {{body}}
+                                {% endblock content %}
+                        </div>
+                </div>
+                <div class="fx-msg-box" id="fx-msg-box">
+                        <span id="fx-msg-content"></span>
+                        <i class="icon-bookmark"></i>
+                </div>
+                <nav class="fx-nav">
+                        <a class="fx-nav-btn fx-nav-toc-btn" title="Table of Contents" id="fx-nav-toc-btn" href="{{pathto('basic_mode_toc')}}">
+                                <i class="icon-bookmark"></i>
+                                <span>Table of Contents</span>
+                        </a>
+
+                        <form class="fx-nav-search" action="search.html">
+                                <input type="text" name="q" id="fx-search-input">
+                                <button type="submit" id="fx-search-btn" hidden>Search</button>
+                        </form>
+
+                        <label class="fx-nav-btn" id="fx-search-btn-label" for="fx-search-btn" title="Search">
+                                <i class="icon-search"></i>
+                        </label>
+
+                        <span class="fx-nav-label fx-mode-label" title="Shortcut keys mode" id="fx-mode">
+                        </span>
+                        
+                        <div class="fx-nav-btn fx-right fx-nav-links-wrap">
+                                <label for="fx-nav-links-btn">
+                                        <i class="icon-cog"></i>
+                                </label>
+                                <input id="fx-nav-links-btn" type="checkbox" hidden="hidden">
+
+                                <div class="fx-nav-links">
+                                        <ul>
+                                                <li>
+                                                        <label for="fx-nav-links-btn" title="Back to reading">Back</label>
+                                                </li>
+
+                                                <li>
+                                                        <a id="fx-next-section" 
+                                                        {% if next %} 
+                                                                href="{{ next.link|e }}" title="Next section"
+                                                        {% else %}
+                                                                class="fx-disabled" title="No next section"
+                                                        {% endif %}
+                                                        >
+                                                                <span>Next</span>
+                                                                <i class="icon-right-open"></i> 
+                                                        </a>
+
+                                                </li>
+
+                                                <li>
+                                                        <a id="fx-parent-section" 
+                                                        {% if parents[0] %}
+                                                                href="{{ parents[0].link|e }}" title="Parent section"
+                                                        {% else %}
+                                                                class="fx-disabled" title="No parent section"
+                                                        {% endif %}
+                                                        >
+                                                                <span>Parent</span>
+                                                                <i class="icon-angle-double-up"></i>
+                                                        </a>
+                                                </li>
+
+                                                <li>
+                                                        <a id="fx-prev-section"
+                                                        {% if prev %}
+                                                                href="{{ prev.link|e }}" title="Previous section"
+                                                        {% else %}
+                                                                class="fx-disabled" title="No previous section"
+                                                        {% endif %}
+                                                        >
+                                                                <span>Previous</span>
+                                                                <i class="icon-left-open"></i> 
+                                                        </a>
+                                                </li>
+
+                                                <li>
+                                                        <a id="fx-doc-source"
+                                                        {% if has_source and sourcename%} 
+                                                                href="/_sources/{{sourcename}}" title="reStructureText source"
+                                                        {% else %}
+                                                                class="fx-disabled" title="No reStructureText source"
+                                                        {% endif %}
+                                                        >
+                                                                <span>Source</span>
+                                                                <i class="icon-code"></i> 
+                                                        </a>
+                                                </li>
+
+                                                <li>
+                                                        <a href="{{pathto('downloads')}}" title="Downloads">
+                                                                <span>Downloads</span>
+                                                                <i class="icon-download"></i> 
+                                                        </a>
+                                                </li>
+
+                                                <li>
+                                                        <a href="{{pathto('help')}}" title="Help">
+                                                                <span>Help</span>
+                                                                <i class="icon-help"></i>
+                                                        </a>
+                                                </li>
+
+                                                <li>
+                                                        <a href="{{pathto('info')}}" title="Information">
+                                                                <span>Information</span>
+                                                                <i class="icon-info"></i> 
+                                                        </a>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+                </ul>
+        </div>
+{% endblock %}
+</body>
+</html>

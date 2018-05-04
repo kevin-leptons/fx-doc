@@ -1,0 +1,39 @@
+fx-doc
+======
+
+Build HTML, PDF from reStructuredText.
+
+Install
+=======
+
+    $ pip install fx-doc
+
+Using
+=====
+
+Compile reStructuredText to document files
+-----------------------------------------
+
+    $ fx-doc build SRC DEST [OPTIONS]
+
+* SRC: Directory contains reStructuredText source files.
+
+* DEST: Directory contains build files.
+
+* OPTIONS:
+    * --dist: Compile and optimize, mean distribution.
+    * --no-pdf: Don't make PDF file.
+    * --no-html: Don't make HTML files.
+    * --no-text: Don't make text files.
+    * --force: Compile without cache files.
+
+Server build files on HTTP
+--------------------------
+
+    $ fx-doc serve DEST [OPTIONS]
+
+* DEST: Directory contains compiled files. It is DEST of `fx-doc build`
+  command.
+
+* OPTIONS:
+    * --port: Port to listen, default is 8080

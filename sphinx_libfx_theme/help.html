@@ -1,0 +1,179 @@
+{% extends "!page.html" %}
+{% block doc_source %}
+{% endblock %}
+{% block content %}
+<div class="section">
+        <h1>Helps</h1>
+
+        <div class="section">
+                <h2>Introduction</h2>
+                <p>
+                This help page is not part of document. Help page provides
+                basic concepts and instructions to use document which
+                contains it. 
+                </p>
+        </div>
+
+        <div class="section">
+                <h2>Full interface</h2>
+                <img src="/_static/img/fx_ui_full.png">
+                <ol class="arabic simple">
+                        <li><code class="docutils literal"><span
+                                                class="pre">TOC</span> <span
+                                                class="pre">Button</span></code>.
+                                Go to Table of Contents page.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">TOC</span> <span
+                                                class="pre">Panel</span></code>.
+                                It displays document&#8217;s Table of
+                                Contents, 3 levels
+                                is maximum.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Content</span>
+                                        <span class="pre">Area</span></code>.
+                                It displays document&#8217;s content which
+                                corresponds with
+                                current section.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Search</span>
+                                        <span class="pre">Box</span></code>.
+                                It is text input, use for input keywords to
+                                search.
+                                Searching returns sections which contains
+                                keywords. To search, select
+                                <code class="docutils literal"><span
+                                                class="pre">Search</span>
+                                        <span class="pre">Box</span></code>,
+                                type keywords then press <code class="docutils
+                                        literal"><span
+                                                class="pre">ENTER</span></code>
+                                key or click to <code class="docutils
+                                        literal"><span
+                                                class="pre">Search</span>
+                                        <span class="pre">Button</span></code>
+                                to start</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Search</span>
+                                        <span
+                                class="pre">Button</span></code>. Click to
+                this button start searching.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Mode</span> <span
+                                                class="pre">Label</span></code>.
+                                Display curent <code class="docutils
+                                        literal"><span
+                                                class="pre">Shortcut</span>
+                                        <span class="pre">keys</span></code>
+                                mode.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">About</span> <span
+                                                class="pre">Link</span></code>.
+                                Go to <code class="docutils literal"><span
+                                                class="pre">About</span> <span
+                                                class="pre">Page</span></code>
+                                where display information about
+                                document.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Help</span> <span
+                                                class="pre">Link</span></code>.
+                                Go to <code class="docutils literal"><span
+                                                class="pre">Help</span> <span
+                                                class="pre">Page</span></code>
+                                where display basic manual to read
+                                document.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Downloads</span>
+                                        <span class="pre">Link</span></code>.
+                                Go to <code class="docutils literal"><span
+                                                class="pre">Downloads</span>
+                                        <span class="pre">Page</span></code>
+                                where contains options to
+                                download other formats of document.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Source</span>
+                                        <span class="pre">Link</span></code>.
+                                Go to text file which is source of current
+                                section in
+                                <a class="reference external"
+                                        href="http://www.sphinx-doc.org/en/master/rest.html#">reStructureText</a>
+                                language.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Next</span> <span
+                                                class="pre">Link</span></code>.
+                                Go to next section. If next section is not
+                                available, this
+                                link is not shows.</li>
+                        <li><code class="docutils literal"><span
+                                                class="pre">Previous</span>
+                                        <span class="pre">Link</span></code>.
+                                Go to previous section. If previous section is
+                                not
+                                available, this link is not shows.</li>
+                </ol>
+        </div>
+
+        <div class="section">
+                <h2>Basic interface</h2>
+                <img src="/_static/img/fx_ui_basic.png">
+        </div>
+
+        <div class="section">
+                <h2>Shortcut keys</h2>
+                <table>
+                        <colgroup>
+                                <col width="22%">
+                                <col width="78%">
+                        </colgroup>
+                        <thead> 
+                                <tr>
+                                        <th class="head">Key</th>
+                                        <th class="head">Description</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <td>ESC</td>
+                                        <td>Go to <b>NORMAL</b> mode</td>
+                                </tr>
+                                <tr>
+                                        <td>BACKQUOTE</td>
+                                        <td>Go to <b>SEARCH</b> mode</td>
+                                </tr>
+                                <tr>
+                                        <td>g</td>
+                                        <td>
+                                                Toogle <b>GOTO</b> mode. In this mode, use 0-9 keys and
+                                                BACKSPACE to select labels then press ENTER key to go to
+                                                target.
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>n</td>
+                                        <td>Go to next section</td>
+                                </tr>
+                                <tr>
+                                        <td>p</td>
+                                        <td>Go to previous section</td>
+                                </tr>
+                                <tr>
+                                        <td>t</td>
+                                        <td>Go to table of contents</td>
+                                </tr>
+                                <tr>
+                                        <td>h</td>
+                                        <td>Go to help page</td>
+                                </tr>
+                                <tr>
+                                        <td>a</td>
+                                        <td>Go to about page</td>
+                                </tr>
+                                <tr>
+                                        <td>d</td>
+                                        <td>Go to downloads page</td>
+                                </tr>
+                        </tbody>
+                </table>
+        </div>
+
+</div>
+{% endblock %}
