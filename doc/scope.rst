@@ -62,9 +62,11 @@ different feel. such wow. many modern.
 .. figure:: img/von_neumann_arch.png
 
 .. literalinclude:: vector.h
+        :language: c
         :caption: vector.h
 
 .. literalinclude:: vector.c
+        :language: c
         :caption: vector.c
 
 

@@ -1,0 +1,2 @@
+include readme
+recursive-include fx_doc/sphinx_theme *

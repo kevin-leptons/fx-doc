@@ -15,8 +15,7 @@ exclude_patterns = []
 pygments_style = 'sphinx'
 todo_include_todos = False
 highlight_language = 'python'
-now_dir = realpath(os.path.dirname(__file__))
-theme_dir = dirname(now_dir)
+theme_dir = dirname(__file__)
 
 
 # HTML output

@@ -4,6 +4,7 @@ import os
 import shutil
 import json
 from os import path
+from pkg_resources import resource_filename
 
 import htmlmin
 import pathlib
@@ -11,6 +12,8 @@ import csscompressor
 import jsmin
 from pathlib import Path
 from PIL import Image
+
+conf_dir = resource_filename(__name__, 'sphinx_theme')
 
 
 class build_config():
@@ -62,7 +65,6 @@ def build_html_from_rst(spec, pdf_file, text_file):
     if text_file is not None:
         text_file_name = Path(text_file).name
 
-    conf_dir = Path(__file__).parent
     cmd = [
             'sphinx-build', '-b', 'html',
             '-c', str(conf_dir),
@@ -144,7 +146,6 @@ def build_pdf(spec):
     latex_name = spec.name.replace(' ', '\_')
     project_name = spec.name.replace(' ', '_')
     pdf_file_name = '{}.pdf'.format(project_name)
-    conf_dir = Path(__file__).parent
     cmd = [
             'sphinx-build', '-b', 'latex',
             '-c', str(conf_dir),

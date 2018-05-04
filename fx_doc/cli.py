@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
 import click
+import sys
+from os.path import dirname, realpath
+from subprocess import Popen
 
 from .doc_builder import build_doc
-from .doc_server import serve_doc
 
 
 @click.group()
@@ -25,5 +27,14 @@ def cli_build(src, dest, no_pdf, no_html, no_text, force, dist):
 @cli.command(name='serve', help='Serve document on HTTP')
 @click.argument('dest')
 @click.option('--port', default=8080)
-def clid_serve(dest, port):
-    serve_doc(dest, port)
+def cli_serve(dest, port):
+    curent_dir = dirname(__file__)
+    dest = realpath(dest)
+    cmd = [
+        'gunicorn', '-b', ':' + str(port), 
+        '--chdir', curent_dir,
+        '--env', 'FX_DOC_DEST={}'.format(dest),
+        'doc_server:app'
+    ]
+    ret = Popen(cmd, cwd=dest).wait()
+    sys.exit(ret)

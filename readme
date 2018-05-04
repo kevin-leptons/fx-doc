@@ -37,3 +37,17 @@ Server build files on HTTP
 
 * OPTIONS:
     * --port: Port to listen, default is 8080
+
+Development
+===========
+
+    $ ./env init
+    $ . ./venv/bin/activate
+    $ ./env install
+    $ fx-doc build doc dest
+    $ fx-doc serve dest
+
+Distribute
+==========
+
+    $ ./push-pip.sh
