@@ -454,14 +454,14 @@ img {
 
 /*TABLE*/
 .fx-table-wrap {
-        overflow: auto;
-        border: 2px solid var(--fx-fg-color);
-        border-radius: 16px;
+    overflow: auto;
+    border: 2px solid var(--fx-fg-color);
+    border-radius: 16px;
 }
 table {
-        width: 100%;
-        height: auto;
-        border-spacing: 0;
+    width: 100%;
+    height: auto;
+    border-spacing: 0;
 }
 table caption {
         padding: 4px;
