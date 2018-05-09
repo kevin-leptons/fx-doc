@@ -407,7 +407,8 @@ blockquote {
 
 /*HEADERLINK*/
 h1, h2, h3, h4, h5, h6 {
-        position: relative;
+    position: relative;
+    display: inline-block;
 }
 h1:hover .headerlink::after,
 h2:hover .headerlink::after,
@@ -421,13 +422,13 @@ h6:hover .headerlink::after {
         visibility: hidden;
 }
 .headerlink::after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 1px dashed var(--fx-fg-color);
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed var(--fx-fg-color);
 }
 
 /*FIGURE*/
