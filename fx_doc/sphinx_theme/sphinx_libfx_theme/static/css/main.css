@@ -467,6 +467,9 @@ table caption {
         padding: 4px;
         text-align: left;
 }
+table caption a {
+    display: none;
+}
 table tbody tr:nth-child(even) {
         background: var(--fx-bg-color);
 }
