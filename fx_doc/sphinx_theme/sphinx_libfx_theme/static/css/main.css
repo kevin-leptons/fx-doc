@@ -391,17 +391,6 @@ div.section > * {
     display: inline-block;
     margin: 4px 0px;
 }
-.code-block-caption a {
-}
-.code-block-caption a:after {
-    content: " ";
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-.code-block-caption:hover a:after {
-    visibility: visible;
-}
 blockquote {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
@@ -440,8 +429,11 @@ h2:hover .headerlink::after,
 h3:hover .headerlink::after,
 h4:hover .headerlink::after,
 h5:hover .headerlink::after,
-h6:hover .headerlink::after {
+h6:hover .headerlink::after,
+table caption:hover .headerlink:after,
+.code-block-caption:hover .headerlink:after {
     visibility: visible;
+    outline: 1px dashed var(--fx-fg-color);
 }
 .headerlink {
     visibility: hidden;
@@ -453,7 +445,6 @@ h6:hover .headerlink::after {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px dashed var(--fx-fg-color);
 }
 
 /*FIGURE*/
@@ -489,11 +480,10 @@ table {
     border-spacing: 0;
 }
 table caption {
-    padding: 4px;
     text-align: left;
-}
-table caption a {
-    display: none;
+    position: relative;
+    width: fit-content;
+    margin: 8px;
 }
 table tbody tr:nth-child(even) {
     background: var(--fx-bg-color);
