@@ -19,10 +19,19 @@
                         {{toctree()}}
                 </div>
                 <div class="fx-body" id="fx-body" tabindex="0">
-                        <div class="fx-content">
+                        <div class="fx-content" >
                                 {% block content %}
                                 {{body}}
                                 {% endblock content %}
+                                
+                                <div class="section fx-local-toctree"
+                                    id="--fx-local-toctree">
+                                    <a href="#--fx-local-toctree">
+                                        <h2>Local Table of Contents</h2>
+                                    </a>
+
+                                    {{toc}}
+                                </div>
                         </div>
                 </div>
                 <div class="fx-msg-box" id="fx-msg-box">

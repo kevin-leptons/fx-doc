@@ -202,17 +202,26 @@ a:hover {
 .toctree-wrapper a:visited,
 .fx-basic-toc a,
 .fx-basic-toc a:hover,
-.fx-basic-toc a:visited {
+.fx-basic-toc a:visited,
+.fx-local-toctree a, 
+.fx-local-toctree a:visited, 
+.fx-local-toctree a:visited {
         color: var(--fx-fg-color);
         text-decoration: none;
         padding: 4px 0px;
 }
 .toctree-wrapper a:hover,
-.fx-basic-toc a:hover {
+.fx-basic-toc a:hover,
+.fx-local-toctree a:hover {
         border-bottom: 2px dashed var(--fx-fg-color);
 }
-.fx-toc li {
+.fx-toc li,
+.fx-local-toctree li {
         list-style: none;
+}
+.fx-local-toctree {
+    margin: 8px 0px;
+    border-top: 2px solid var(--fx-fg-color);
 }
 
 /*INPUT*/
