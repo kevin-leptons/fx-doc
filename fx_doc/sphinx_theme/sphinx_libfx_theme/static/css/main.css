@@ -386,6 +386,22 @@ div.section > * {
         padding: 8px;
         font-size: 16px;
 }
+.code-block-caption {
+    position: relative;
+    display: inline-block;
+    margin: 4px 0px;
+}
+.code-block-caption a {
+}
+.code-block-caption a:after {
+    content: " ";
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.code-block-caption:hover a:after {
+    visibility: visible;
+}
 blockquote {
         -webkit-margin-start: 0px;
         -webkit-margin-end: 0px;
