@@ -20,6 +20,7 @@ def cli_help():
     print('COMMANDS')
     print(' init        Initialize venv')
     print(' install     Install both dev and req packages into venv')
+    print(' clean       Clean venv files')
     print(' help        Show help information')
 
 
@@ -51,7 +52,7 @@ def cli_init():
 
     install_venv()
     init_venv()
-    
+
 
 def install_dev_packages():
     cmd = ['pip', 'install', '-r', 'dev-requires.txt']

@@ -57,7 +57,6 @@ def mk_build_spec(src_dir, dest_dir, force):
 
 
 def build_html_from_rst(spec, pdf_file, text_file):
-    spec.name = spec.name.encode('utf-8')
     pdf_file_name = None
     if pdf_file is not None:
         pdf_file_name = Path(pdf_file).name
@@ -82,7 +81,7 @@ def build_html_from_rst(spec, pdf_file, text_file):
     ]
     if spec.force:
         cmd.append('-a')
-    print(' '.join(cmd).encode('utf-8'))
+    print(' '.join(cmd))
     subprocess.call(cmd)
 
 
@@ -119,7 +118,6 @@ def mk_launcher_icons(spec):
 
 
 def mk_manifest_file(spec):
-    spec.name = spec.name.encode('utf-8')
     icons = mk_launcher_icons(spec)
     data = {
             'background_color': 'white',
@@ -145,8 +143,8 @@ def mk_favicon(spec):
 
 def build_pdf(spec):
     pdf_dest_dir = os.path.join(spec.dest_dir, 'pdf')
-    latex_name = spec.name.replace(' ', '\_').encode('utf-8')
-    project_name = spec.name.replace(' ', '_').encode('utf-8')
+    latex_name = spec.name.replace(' ', '\_')
+    project_name = spec.name.replace(' ', '_')
     pdf_file_name = '{}.pdf'.format(project_name)
     cmd = [
             'sphinx-build', '-b', 'latex',
@@ -165,7 +163,7 @@ def build_pdf(spec):
 
 
 def build_text(spec):
-    project_name = spec.name.replace(' ', '_').encode('utf-8')
+    project_name = spec.name.replace(' ', '_')
     text_file_name = '{}.txt.tar.gz'.format(project_name)
     dest_dir = pathlib.Path(spec.dest_dir) / 'text'
     dest_file = dest_dir / text_file_name
