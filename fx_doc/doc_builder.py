@@ -82,7 +82,7 @@ def build_html_from_rst(spec, pdf_file, text_file):
     ]
     if spec.force:
         cmd.append('-a')
-    print(' '.join(cmd))
+    print(' '.join(cmd).encode('utf-8'))
     subprocess.call(cmd)
 
 
