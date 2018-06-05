@@ -163,7 +163,7 @@ def build_pdf(spec):
 
 
 def build_text(spec):
-    project_name = spec.name.replace(' ', '_')
+    project_name = spec.name.replace(' ', '_').encode('utf-8')
     text_file_name = '{}.txt.tar.gz'.format(project_name)
     dest_dir = pathlib.Path(spec.dest_dir) / 'text'
     dest_file = dest_dir / text_file_name
