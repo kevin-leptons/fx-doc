@@ -144,7 +144,7 @@ def mk_favicon(spec):
 def build_pdf(spec):
     pdf_dest_dir = os.path.join(spec.dest_dir, 'pdf')
     latex_name = spec.name.replace(' ', '\_')
-    project_name = spec.name.replace(' ', '_')
+    project_name = spec.name.replace(' ', '_').encode('utf-8')
     pdf_file_name = '{}.pdf'.format(project_name)
     cmd = [
             'sphinx-build', '-b', 'latex',
