@@ -31,7 +31,7 @@ def cli_serve(dest, port):
     curent_dir = dirname(__file__)
     dest = realpath(dest)
     cmd = [
-        'gunicorn', '-b', ':' + str(port), 
+        'gunicorn', '-b', ':' + str(port),
         '--chdir', curent_dir,
         '--env', 'FX_DOC_DEST={}'.format(dest),
         'doc_server:app'
