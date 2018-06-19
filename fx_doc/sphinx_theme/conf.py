@@ -2,7 +2,10 @@ import os
 from os import path
 from os.path import dirname, realpath
 
-extensions = ['sphinx.ext.coverage', 'sphinx.ext.autodoc']
+extensions = [
+    'sphinx.ext.coverage', 'sphinx.ext.autodoc',
+    'sphinx.ext.imgmath'
+]
 source_suffix = ['.rst']
 master_doc = 'index'
 project = u'libfx'
@@ -16,6 +19,9 @@ pygments_style = 'sphinx'
 todo_include_todos = False
 highlight_language = 'python'
 theme_dir = dirname(__file__)
+
+# Math
+imgmath_image_format = 'svg'
 
 
 # HTML output
