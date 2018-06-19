@@ -6,6 +6,7 @@ Build HTML, PDF from reStructuredText.
 Install
 =======
 
+    $ apt-get install dvipng
     $ pip install fx-doc
 
 Using
