@@ -6,7 +6,6 @@ Build HTML, PDF from reStructuredText.
 Install
 =======
 
-    $ apt-get install dvipng
     $ pip install fx-doc
 
 Using
@@ -22,6 +21,7 @@ Compile reStructuredText to document files
 * DEST: Directory contains build files.
 
 * OPTIONS:
+
     * --dist: Compile and optimize, mean distribution.
     * --no-pdf: Don't make PDF file.
     * --no-html: Don't make HTML files.
@@ -41,6 +41,12 @@ Server build files on HTTP
 
 Development
 ===========
+
+Install following pacakges:
+
+    $ apt-get install python 
+    $ apt-get install texlive-full  # required for PDF building
+    $ sudo pip install virtualenv
 
     $ ./env init
     $ . ./venv/bin/activate

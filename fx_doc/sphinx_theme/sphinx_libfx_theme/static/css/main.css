@@ -1,7 +1,7 @@
 :root {
     --fx-bg-color: white;           /*background color*/
     --fx-fg-color: black;           /*forground color for main text*/
-    --fx-pm-color: #ca0a74;         /*primary color for special text*/
+    --fx-pm-color: green;         /*primary color for special text*/
     --fx-cm-color: grey;            /*comment color*/
     --fx-dg-color: red;             /*danger color for error text*/
     --fx-wn-color: #ec942d;          /*warning clor for warn text*/
@@ -39,7 +39,7 @@ a {
 a,
 a:visited,
 a:hover {
-    color: var(--fx-pm-color);
+    color: var(--fx-fg-color);
 }
 a:hover {
     border-bottom: 2px dotted var(--fx-fg-color);

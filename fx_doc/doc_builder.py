@@ -151,7 +151,6 @@ def build_pdf(spec):
             '-c', str(conf_dir),
             '-D', 'project={}'.format(latex_name),
             '-D', 'version={}'.format(spec.version),
-            # '-D', 'latex_elements.release={}'.format(config['version']),
             spec.src_dir, pdf_dest_dir
     ]
     if spec.force:
