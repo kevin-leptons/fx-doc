@@ -19,15 +19,10 @@ todo_include_todos = False
 highlight_language = 'python'
 theme_dir = dirname(__file__)
 
-# Math
-imgmath_image_format = 'svg'
-
-
 # HTML output
 html_theme = 'sphinx_libfx_theme'
 html_theme_path = [theme_dir]
 html_last_updated_fmt = "%Y/%m/%d %H:%M"
-html_logo = os.path.join(theme_dir, 'sphinx_libfx_theme/static/img/libfx.png')
 html_additional_pages = {
     'info': 'info.html',
     'help': 'help.html',
@@ -36,14 +31,11 @@ html_additional_pages = {
     'basic_mode_toc': 'basic_mode_toc.html',
 }
 
-
 # PDF output
-libfx_logo_path_rel = 'sphinx_libfx_theme/static/img/libfx.png'
-libfx_logo_path = path.join(theme_dir, libfx_logo_path_rel)
 latex_elements = {
     'sphinxsetup': r'''
-        InnerLinkColor={HTML}{d00a74},
-        OuterLinkColor={HTML}{d00a74},
+        InnerLinkColor={HTML}{000000},
+        OuterLinkColor={HTML}{000000},
         VerbatimColor={HTML}{ffffff},
         VerbatimBorderColor={HTML}{000000},
         VerbatimHighlightColor={HTML}{000000}
@@ -81,8 +73,6 @@ latex_elements = {
         \textbf{version \version}
 
         \vfill{}
-
-        \includegraphics[width=0.5\textwidth]{''' + libfx_logo_path + r'''}
 
         \textbf{\@date}
 
