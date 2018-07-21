@@ -3,8 +3,7 @@ from os import path
 from os.path import dirname, realpath
 
 extensions = [
-    'sphinx.ext.coverage', 'sphinx.ext.autodoc',
-    'sphinx.ext.imgmath'
+    'sphinx.ext.coverage', 'sphinx.ext.autodoc'
 ]
 source_suffix = ['.rst']
 master_doc = 'index'
