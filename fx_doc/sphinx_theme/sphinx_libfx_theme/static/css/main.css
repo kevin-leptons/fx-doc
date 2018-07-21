@@ -29,11 +29,6 @@
     outline: none;
 }
 
-/*FONTS*/
-@font-face {
-    font-family: 'Roboto';
-    src: url('https://fonts.googleapis.com/css?family=Roboto');
-}
 
 /*LINK*/
 a {
@@ -234,7 +229,7 @@ button:hover {
 
 /*PARAGRAPH*/
 body {
-    font-family: "Roboto" ,sans-serif;
+    font-family: "YuGothic" ,sans-serif;
     font-size: var(--fx-normal-font-size);
     background: var(--fx-bg-color);
     color: var(--fx-fg-color);
