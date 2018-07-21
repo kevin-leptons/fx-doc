@@ -8,7 +8,7 @@ with open('readme') as f:
 
 setup(
     name='fx-doc',
-    version='0.7.0',
+    version='0.8.0',
     license='MIT',
     description='Build reStructuredText to HTML, PDF and text',
     long_description=long_desc,
