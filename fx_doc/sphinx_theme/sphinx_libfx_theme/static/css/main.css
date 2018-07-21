@@ -28,8 +28,8 @@
 
 /*FONTS*/
 @font-face {
-    font-family: 'open-sans';
-    src: url('../fonts/open-sans-regular.woff2');
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto');
 }
 
 /*LINK*/
@@ -238,7 +238,7 @@ button:hover {
 
 /*PARAGRAPH*/
 body {
-    font-family: "open-sans",arial,x-locale-body,sans-serif;
+    font-family: "Roboto" ,sans-serif;
     font-size: var(--fx-normal-font-size);
     background: var(--fx-bg-color);
     color: var(--fx-fg-color);
