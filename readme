@@ -54,11 +54,14 @@ Install following pacakges:
     $ fx-doc build doc dest
     $ fx-doc serve dest
 
-note
-----
-For mac, we can use [MacTeX](for mac: https://www.tug.org/mactex/mactex-download.html) instead of `texlive-full`
+Note: For mac, we can use MacTeX [1] instead of `texlive-full`.
 
 Distribute
 ==========
 
     $ ./push-pip.sh
+
+Links
+======
+
+[1] https://www.tug.org/mactex/mactex-download.html
