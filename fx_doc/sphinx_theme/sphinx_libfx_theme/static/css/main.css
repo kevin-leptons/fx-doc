@@ -205,6 +205,9 @@ ul {
     text-decoration: none;
     padding: 4px 0px;
 }
+.fx-local-toctree {
+    border-top: 1px solid var(--fx-fg-color);
+}
 .toctree-wrapper a:hover,
 .fx-basic-toc a:hover,
 .fx-local-toctree a:hover {
