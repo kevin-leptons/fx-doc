@@ -164,6 +164,8 @@ function sk_do_goto(e) {
 function keyboard_handler(e) {
         if (e.keyCode == kb_key_esc)
                 sk_release();
+        if (e.ctrlKey || e.altKey)
+            return;
 
         switch(sk_now_mode) {
                 case sk_mode_normal: sk_do_normal(e); break;
@@ -266,12 +268,12 @@ function focus_content_node() {
         setTimeout(function() {
                 if (content_body_node)
                         content_body_node.focus();
-        }, 0); 
+        }, 0);
 }
 
 function jump_to_hashtag() {
         var hash = window.location.hash;
-        if (!hash) 
+        if (!hash)
                 return;
         setTimeout(function() {
                 window.location.hash = "";
