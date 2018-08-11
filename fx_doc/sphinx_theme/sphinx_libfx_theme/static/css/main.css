@@ -38,6 +38,9 @@ a:visited,
 a:hover {
     color: var(--fx-fg-color);
 }
+a:hover {
+    outline: 1px solid var(--fx-bd-color);
+}
 .fx-link-hide a,
 .fx-link-hide a:hover,
 .fx-link-hide a:visited {
@@ -91,7 +94,7 @@ ul {
     text-decoration: none;
 }
 .fx-nav-links a:hover {
-    outline: 1px solid var(--fx-fg-color);
+    outline: 1px solid var(--fx-bd-color);
 }
 .fx-nav-links label:hover {
 }
@@ -211,7 +214,7 @@ ul {
 .toctree-wrapper a:hover,
 .fx-basic-toc a:hover,
 .fx-local-toctree a:hover {
-    outline: 1px solid  var(--fx-fg-color);
+    outline: 1px solid  var(--fx-bd-color);
 }
 .fx-toc li,
 .fx-local-toctree li {
@@ -276,11 +279,11 @@ body {
     position: relative;
 }
 .fx-toc .reference:hover {
-    outline: 1px solid var(--fx-fg-color);
+    outline: 1px solid var(--fx-bd-color);
 }
 .fx-toc .reference.current,
 .fx-toc .reference:hover:after {
-    outline: 1px solid var(--fx-fg-color);
+    outline: 1px solid var(--fx-bd-color);
 }
 .section {
     padding: 8px 0px;
@@ -435,7 +438,7 @@ table caption:hover .headerlink:after,
     left: 0;
     width: 100%;
     height: 100%;
-    outline: 1px solid var(--fx-fg-color);
+    outline: 1px solid var(--fx-bd-color);
 }
 
 /*FIGURE*/
@@ -535,7 +538,7 @@ label:hover {
         display: inline;
     }
     #fx-nav-toc-btn:hover {
-        outline: 1px solid var(--fx-fg-color);
+        outline: 1px solid var(--fx-bd-color);
     }
     .fx-nav-links ul {
         padding: 0;
