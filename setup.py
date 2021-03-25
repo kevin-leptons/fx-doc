@@ -21,7 +21,7 @@ setup(
     author_email='kevin.leptons@gmail.com',
     url='https://github.com/kevin-leptons/fx-doc',
     install_requires=[
-        'sphinx==1.7.2', 'click==6.7', 'flake8==3.5.0', 'PyYAML==3.12',
+        'sphinx==1.7.2', 'click==6.7', 'flake8==3.5.0', 'PyYAML==5.4',
         'htmlmin==0.1.12', 'pathlib==1.0.1', 'jsmin==2.2.2',
         'csscompressor==0.9.5', 'Pillow==5.0.0',
         'Flask==0.12.2', 'gunicorn==19.7.1'
