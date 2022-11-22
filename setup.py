@@ -23,7 +23,7 @@ setup(
     install_requires=[
         'sphinx==1.7.2', 'click==6.7', 'flake8==3.5.0', 'PyYAML==3.12',
         'htmlmin==0.1.12', 'pathlib==1.0.1', 'jsmin==2.2.2',
-        'csscompressor==0.9.5', 'Pillow==5.0.0',
+        'csscompressor==0.9.5', 'Pillow==9.3.0',
         'Flask==0.12.2', 'gunicorn==19.7.1'
     ],
     packages=find_packages(exclude=['test']),
